@@ -1,0 +1,20 @@
+@use '../../index' as mix;
+
+.layout {
+  min-height: calc(100vh - 72px) !important;
+}
+
+.layout__header {
+  @include mix.shadowed;
+  padding: 15px;
+
+  .ant-page-header-heading-title {
+    font-size: 30px;
+    font-weight: 800;
+  }
+}
+
+.layout__content {
+  background-color: #fff;
+  margin-top: 25px;
+}
