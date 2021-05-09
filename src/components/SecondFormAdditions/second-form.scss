@@ -1,0 +1,22 @@
+@use '../../index' as mix;
+
+.second-form {
+  @include mix.shadowed;
+}
+
+.second-form__button {
+  width: 100%;
+  margin-top: 30px;
+}
+
+@media all and (min-width: 575px) {
+  .second-form__input-group + .second-form__input-group {
+    margin-top: 20px;
+  }
+}
+
+@media all and (max-width: 575px) {
+  .second-form__input {
+    margin-top: 20px !important;
+  }
+}

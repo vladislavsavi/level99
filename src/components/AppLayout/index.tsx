@@ -11,7 +11,7 @@ export const AppLayout: FC = ({ children }) => {
     <Layout className="layout">
       <PageHeader ghost={false} className="layout__header" title="Test task" />
       <Content className="layout__content">
-        <Container fluid>{children}</Container>
+        <Container>{children}</Container>
       </Content>
     </Layout>
   );

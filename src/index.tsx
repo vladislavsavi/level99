@@ -1,15 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import { AppLayout, FirstFormAdditions } from "./components";
+import { AppLayout } from "./components";
+import { AdditionForms } from "./widgets";
 
 import "normalize.css";
+import "antd/dist/antd.css";
 import "./index.scss";
 
 ReactDOM.render(
   <React.StrictMode>
     <AppLayout>
-      <FirstFormAdditions />
+      <AdditionForms />
     </AppLayout>
   </React.StrictMode>,
   document.getElementById("root")

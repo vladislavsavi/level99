@@ -1,0 +1,14 @@
+@use '../../index' as mix;
+
+.first-form {
+  @include mix.shadowed;
+}
+
+.first-form__input + .first-form__input {
+  margin-top: 20px;
+}
+
+.first-form__button {
+  width: 100%;
+  margin-top: 30px;
+}
