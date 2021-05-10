@@ -15,12 +15,14 @@ export interface FirstFormData {
 interface Props extends Omit<HTMLAttributes<HTMLDivElement>, "onChange"> {
   onChange: (key: keyof FirstFormData, value: string | number) => void;
   formData: Partial<FirstFormData>;
+  addRow?: () => void;
 }
 
 export const FirstFormAdditions: FC<Props> = ({
   onChange,
   formData,
   className,
+  addRow,
 }) => {
   return (
     <Card className={`first-form ${className}`}>
@@ -52,7 +54,7 @@ export const FirstFormAdditions: FC<Props> = ({
         value={formData.city}
         onChange={(e) => onChange("city", e.target.value)}
       />
-      <Button className="first-form__button" type="primary">
+      <Button onClick={addRow} className="first-form__button" type="primary">
         ADD
       </Button>
     </Card>

@@ -16,12 +16,14 @@ export interface SecondFormData {
 interface Props extends Omit<HTMLAttributes<HTMLDivElement>, "onChange"> {
   onChange: (key: keyof SecondFormData, value: string | number) => void;
   formData: Partial<SecondFormData>;
+  addRow?: () => void;
 }
 
 export const SecondFormAdditions: FC<Props> = ({
   onChange,
   formData,
   className,
+  addRow,
 }) => {
   return (
     <Card className={`second-form ${className}`}>
@@ -68,7 +70,11 @@ export const SecondFormAdditions: FC<Props> = ({
       </Row>
       <Row justify="center">
         <Col md={6} sm={12}>
-          <Button className="second-form__button" type="primary">
+          <Button
+            onClick={addRow}
+            className="second-form__button"
+            type="primary"
+          >
             ADD
           </Button>
         </Col>

@@ -1,0 +1,12 @@
+.app-table {
+  .ant-table-thead .ant-table-cell {
+    background-color: #1890ff;
+    color: #fff;
+    border-right: none !important;
+  }
+}
+
+.app-table__actions {
+    width: 100%;
+    justify-content: flex-end;
+}
